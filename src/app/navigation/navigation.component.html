@@ -1,0 +1,70 @@
+
+   <mat-sidenav-container class="sidenav-container">
+  <mat-sidenav role="navigation" #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar style=" margin-top: 1rem;">BincomDevCenter</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="['home']"><mat-icon>home</mat-icon>Home</a>
+      <a mat-list-item [routerLink]="['dashboard']"><mat-icon>dashboard</mat-icon>Dashboard</a>
+      <a mat-list-item routerLink="/kd" routerLinkActive="active"><mat-icon>subject</mat-icon><pre></pre>Knowledge Development</a>
+      <a mat-list-item routerLink="/ce" routerLinkActive="active"><mat-icon>event</mat-icon>Community Events</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="secondary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+
+      </button>
+      <span></span>
+      <div class="topbar">
+        <span> <img src="../../assets/Logo.png" style="width: 40px" alt="" class="user-image li-1 p-2"/></span>
+      <span></span>
+
+      </div>
+
+      <div fxShow="true" fxHide.lt-md fxFlex fxLayout>
+        <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+        <div fxFlex>
+
+        </div>
+        <div fxFlex fxLayoutAlign="center center">
+          <div class="row mr-2 ml-auto">
+            <ul>
+              <li style="list-style: none;">
+                <button mat-button class="user mt-2 d-flex align-item-center" >
+                  <img src="../../assets/young-man-profile-vector-14770074.jpg" style="width: 20px" alt="" class="user-image li-1 p-2"/>
+                  Username
+                  <mat-icon class="user-image-icon ,l-1">keyboard_arrow_down</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                  <button mat-menu-item>
+                    <mat-icon>exit_to_app</mat-icon>
+                    Logout
+                  </button>
+                </mat-menu>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div fxFlex fxLayoutAlign="flex-end center">
+
+        </div>
+      </div>
+
+     </mat-toolbar>
+
+    <!-- A[[dd Content Here -->
+
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+

@@ -1,0 +1,76 @@
+
+mat-card {
+  width: calc(100% - 70px);
+  height: calc(100% - 70px);
+  padding: 20px;
+}
+#box{
+  background-color: rgb(14, 203, 93);
+  border-radius: 10px;
+  padding: 10px;
+  min-height: 100px;
+
+}
+#msg{
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 10px;
+  min-height: 100px;
+}
+#kd{
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #56C643;
+}
+.mat-card-title{
+  font-size: 18px;
+}
+.mat-card-subtitle{
+  color: black;
+}
+.kd-submit{
+ padding: 5px;
+}
+.data-card{
+
+  padding: 5px;
+  margin: 5px;
+  color: black;
+}
+.kd-box{
+  background-color: darkgrey;
+  padding: 20px;
+  border-radius: 10px;
+  color: #ffffff;
+}
+.example-card{
+  background-color: #f4f4f4;
+  color: black;
+  box-shadow: none;
+  background-color: #ffffff;
+}
+.kd-input{
+  width: 100%;
+  background-color: rgb(238, 236, 236);
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.btn-artefact{
+  padding: 10px;
+  background-color: #56C643;
+  color: #ffffff;
+  border:1px solid #56C643;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+
+
+
+

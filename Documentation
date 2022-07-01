@@ -1,0 +1,16 @@
+Routing
+1. add a forward slash in the header tag of the index.html like so ( <base href="/">)
+2. configure the routes. state the path and corresponding component.
+3. pass the defined routed as an argument for the forRoot method of the router module.
+4. export the appRoutingModule and routingComponents
+5.  import it in the app module and include it in the import array and declarations array.
+congrats! you can now navigate via links
+6. to navigate via buttons use the routerLink directive and specify the paths.
+7.to change the style of the active route use the routerlinkActive directive.
+
+
+dynamic Grid layout
+ implement oninit in the app.component.ts
+ create a public list and set type to empty array
+ create a public ngOnInIt and in the curly braces sepcify the value of "this.list" array
+ create the objects for the grid and specify values

@@ -1,0 +1,55 @@
+
+
+ <mat-toolbar class="nav">
+  <div>
+    <img class="logo" src="../../../assets/Logo.png" alt="Bincom-Logo" width="60px">
+  </div>
+</mat-toolbar>
+<h2 class="header" style="font-family: 'Poppins', sans-serif !important; margin-top:2rem !important;">Bincom Dev Center</h2>
+<div class="container">
+  <h1 style="font-family: 'Poppins', sans-serif !important; font-size: 2rem !important; font-weight: 700 !important;">Login</h1>
+
+
+  <mat-card-subtitle style="font-family: 'Poppins', sans-serif !important; font-weight: 500 !important; color: black; font-size: 0.7rem;">
+    Welcome. Please login
+  </mat-card-subtitle>
+
+    <form class="cover" #login="ngForm" (ngSubmit)="submit(login)">
+        <div class="form-group">
+          <mat-form-field style="width: 400px !important;" hideRequiredMarker appearance="fill">
+            <mat-label  for="username">Enter Username</mat-label>
+            <input  class="form-group" matInput #uname="ngModel" required minlength="3" maxlength="10" type="text"  name="username" class="form-control" ngModel>
+            <div *ngIf="uname.touched && uname.invalid" class="alert alert-danger">
+              <p *ngIf="uname.errors?.['required']"></p>
+              <p *ngIf="uname.errors?.['minlength']">Sorry! Too short</p>
+            </div>
+          </mat-form-field>
+        </div>
+
+        <div class="form-group">
+          <mat-form-field style="width: 400px !important; margin-bottom: 10px !important;" hideRequiredMarker appearance="fill">
+            <mat-label for="password">Enter Password</mat-label>
+            <input  type="text" matInput required name="password" class="form-control" ngModel>
+          </mat-form-field>
+        </div>
+      <div>
+          <button id="myBtn"  mat-raised-button class="btn btn-primary" class="btn" type="submit+">Login</button>
+        </div>
+        <div class="bottom-links" style="width: 400px !important;">
+          <div style="display: inline-block!important; margin-right: 12rem!important;"><mat-checkbox>Remember me</mat-checkbox></div>
+          <div style="display: inline-block!important;"> <a href="#">Forgot your password</a></div>
+        </div>
+    </form>
+
+</div>
+
+<mat-toolbar class="bottom-nav">
+  <div>
+    <p class="mynav2">
+      Contact admin  -
+      <a href="#">Bincomdevcenter@bincom.net,</a>
+      <a href="#">Proservices@bincom.net</a>
+  </p>
+  </div>
+</mat-toolbar>
+
